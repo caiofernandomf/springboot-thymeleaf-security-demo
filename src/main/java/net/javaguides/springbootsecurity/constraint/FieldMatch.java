@@ -1,4 +1,4 @@
-package net.javaguides.springboot.springsecurity.constraint;
+package net.javaguides.springbootsecurity.constraint;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

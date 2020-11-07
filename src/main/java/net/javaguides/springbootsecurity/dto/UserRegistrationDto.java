@@ -1,10 +1,13 @@
-package net.javaguides.springboot.springsecurity.controller.dto;
+package net.javaguides.springbootsecurity.dto;
+
+import java.util.List;
 
 import javax.validation.constraints.AssertTrue;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import net.javaguides.springboot.springsecurity.constraint.FieldMatch;
+import net.javaguides.springbootsecurity.constraint.FieldMatch;
+import net.javaguides.springbootsecurity.entities.Role;
 
 @FieldMatch.List({
     @FieldMatch(first = "password", second = "confirmPassword", message = "The password fields must match"),
@@ -29,7 +32,17 @@ public class UserRegistrationDto {
     private String confirmEmail;
     @AssertTrue
     private Boolean terms;
+    @NotEmpty
+    private List<Role> roles;
 
+    public List<Role> getRoles() {
+        return this.roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+    
 
     public String getFirstName() {
         return this.firstName;
