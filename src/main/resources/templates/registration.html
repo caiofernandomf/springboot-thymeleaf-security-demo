@@ -102,9 +102,9 @@
       </label>
       <span th:each="role:${rolesList}">        
         <input id="roles" name="roles" class="form-control"
-       type="checkbox" value="th:value='${role.id}'" th:field="*{roles}" />
-       <span th:text="${role.name}"></span>
-      </span>      
+       type="checkbox" th:text="${role.name}" value="th:value='${role.id}'" th:field="*{roles}" />
+       <!-- <span th:text="${role.name}"></span>
+      </span> -->      
       <p class="error-message"
        th:each="error : ${#fields.errors('roles')}"
        th:text="${error}">Validation error</p>
