@@ -98,9 +98,9 @@
      </div>
      <div class="form-group"
       th:classappend="${#fields.hasErrors('roles')}? 'has-error':''">
-      <label for="roles" class="control-label">roles      
-        <input id="roles" name="roles" class="form-control"
-       type="checkbox" th:each="role:${roles}" th:text="${role.name}" value="th:value='${role.id}'" th:field="*{roles}" />
+      <label class="control-label">roles      
+        <input name="roles" class="form-control"
+       type="checkbox" th:each="role:${rolesList}" th:text="${role.name}" value="th:value='${role.id}'" th:field="*{roles}" />
       </label>      
       <p class="error-message"
        th:each="error : ${#fields.errors('roles')}"
