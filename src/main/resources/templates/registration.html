@@ -100,9 +100,9 @@
       th:classappend="${#fields.hasErrors('roles')}? 'has-error':''">
       <label for="roles" class="control-label">roles
       </label>
-      <span th:each="role:${rolesList}">        
+      <!-- <span th:each="role:${rolesList}">         -->
         <input id="roles" name="roles" class="form-control"
-       type="checkbox" th:text="${role.name}" value="th:value='${role.id}'" th:field="*{roles}" />
+       type="checkbox" th:each="role:${roles}" th:text="${role.name}" value="th:value='${role.id}'" th:field="*{roles}" />
        <!-- <span th:text="${role.name}"></span>
       </span> -->      
       <p class="error-message"
