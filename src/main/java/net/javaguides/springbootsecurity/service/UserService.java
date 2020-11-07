@@ -26,6 +26,19 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public User findByEmail(String email){
+        User user=null;
+        try {
+            user =userRepository.
+                    findByEmail(email).get();
     
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+                            
+    }
+
+
                          
 }
