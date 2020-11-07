@@ -101,8 +101,8 @@
       <label for="roles" class="control-label">roles
       </label>
       <span th:each="role:${rolesList}">        
-        <input id="roles" name="roles[]" class="form-control"
-       type="checkbox" value="th:text='${role.id}'" th:field="*{roles}" />
+        <input id="roles" name="roles" class="form-control"
+       type="checkbox" value="th:value='${role.id}'" th:field="*{roles}" />
        <span th:text="${role.name}"></span>
       </span>      
       <p class="error-message"
