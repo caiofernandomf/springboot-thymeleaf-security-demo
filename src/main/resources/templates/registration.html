@@ -97,6 +97,19 @@
        th:text="${error}">Validation error</p>
      </div>
      <div class="form-group"
+      th:classappend="${#fields.hasErrors('roles')}? 'has-error':''">
+      <label for="roles" class="control-label">roles
+      </label>
+      <span th:each="role:${rolesList}">        
+        <input id="roles" name="roles[]" class="form-control"
+       type="checkbox" value="th:text='${role.id}'" th:field="*{roles}" />
+       <span th:text="${role.name}"></span>
+      </span>      
+      <p class="error-message"
+       th:each="error : ${#fields.errors('roles')}"
+       th:text="${error}">Validation error</p>
+     </div>
+     <div class="form-group"
       th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
       <input id="terms" type="checkbox" th:field="*{terms}" />   <label
        class="control-label" for="terms"> I agree with the <a
