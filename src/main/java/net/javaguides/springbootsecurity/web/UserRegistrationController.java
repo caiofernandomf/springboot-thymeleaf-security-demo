@@ -33,7 +33,7 @@ public class UserRegistrationController {
         return new UserRegistrationDto();
     }
 
-    @ModelAttribute("roles")
+    @ModelAttribute("rolesList")
     public List<Role> listOfRoles(){
         return roleRepository.findAll();
     }
