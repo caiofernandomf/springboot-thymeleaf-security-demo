@@ -24,6 +24,7 @@
   <h3>Form with CSRF Token</h3>
   <form th:action="@{/messages}" method="post">
    <textarea name="content" cols="50" rows="5"></textarea>
+   <!-- <input type="hidden" th:value='${principal.username}'/>  -->
    <br>
    <input type="submit" value="Submit" />
   </form>
