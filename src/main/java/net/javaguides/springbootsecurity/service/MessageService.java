@@ -16,7 +16,7 @@ public class MessageService {
     private MessageRepository messageRepository;
 
     public List<Message> messageList(Principal principal){
-                
+
         return messageRepository.
                 findByUser(
                     messageRepository.
@@ -24,5 +24,17 @@ public class MessageService {
                         principal.getName()
                     ).get()
                 );
+    }
+
+    public void saveMessage(Principal principal,
+                            Message message){
+        message.setUser(
+            messageRepository
+            .findUserByEmail(
+                principal.getName()
+            ).get()
+        );
+        messageRepository.save(message);
+        
     }
 }
