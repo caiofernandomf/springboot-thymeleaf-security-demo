@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -22,7 +23,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  */
 
  @Entity
- @Table(name = "users")
+ @Table(name = "USERS")
 public class User {
 
     @Id
@@ -50,6 +51,9 @@ public class User {
         inverseJoinColumns = {@JoinColumn(name="ROLE_ID",referencedColumnName = "ID")}
     )
     private List <Role> roles;
+    
+    /* @OneToMany(mappedBy = "users")
+    private List<Message> messages; */
     /**
      * @return Integer return the id
      */
