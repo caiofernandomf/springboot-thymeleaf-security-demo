@@ -3,6 +3,11 @@
 <h3><b>SpringBoot tutorials learned in javaguides.net</b></h3>
 <img src="https://1.bp.blogspot.com/-z-L__bD9I9s/XGzQ1Du6KMI/AAAAAAAAFm8/8v54HOix1YUiAP05EXlIiiUDIjo3dCosgCK4BGAYYCw/w800/javaguides-logo.png"/>
 # The original project can be found here
-<a href="https://www.javaguides.net/2018/09/spring-boot-spring-mvc-role-based-spring-security-jpa-thymeleaf-mysql-tutorial.html">
+<p><a href="https://www.javaguides.net/2018/09/spring-boot-spring-mvc-role-based-spring-security-jpa-thymeleaf-mysql-tutorial.html">
 https://www.javaguides.net/2018/09/spring-boot-spring-mvc-role-based-spring-security-jpa-thymeleaf-mysql-tutorial.html
-</a>
+</a></p>
+<p>
+  <a href="https://github.com/RameshMF/spring-boot-tutorial/tree/master/springboot-thymeleaf-security-demo">
+    https://github.com/RameshMF/spring-boot-tutorial/tree/master/springboot-thymeleaf-security-demo
+  </a>
+  </p>
