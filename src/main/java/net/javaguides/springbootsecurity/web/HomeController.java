@@ -28,7 +28,7 @@ public class HomeController {
 
     @PostMapping("/messages")
     public String saveMessage(Message message){
-        messageRepository.save(message);
+        messageRepository.save(message);        
         return "redirect:/home";
     }
 }
