@@ -27,14 +27,28 @@
       <div class="form-group">
        <label>
             <input type="checkbox" name="remember-me"> Remember Me
-          </label>
-      </div>
+          </label>          
+        </div>
       <div class="row">
        <div class="form-group col-xs-offset-8 col-xs-4">
         <button type="submit" class="btn btn-primary btn-block btn-flat"
          th:text="#{label.login}">LogIn</button>
        </div>
       </div>
+      <span class="form-group col-xs-offset-4 col-xs-4">
+        <a sec:authorize="isAnonymous()" th:href="@{/registration}">Register user
+          <span
+          class="glyphicon glyphicon-user"></span>
+        </a>
+      </span>
+      <!-- <div class="form-group">
+        <p sec:authorize="isAnonymous()">
+        <a th:href="@{/registration}">Register user
+          <span
+          class="glyphicon glyphicon-user"></span>
+        </a>
+        </p>
+      </div> -->      
       <div class="row">
        <div class="col-xs-12">
         <div th:if="${param.error}"
